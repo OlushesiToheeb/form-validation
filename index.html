@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="main">
+      <section class="form-page">
+        <div class="intro">
+          <h1 class="headIntro">
+            <strong>Learn To Code By Watching Others</strong>
+          </h1>
+          <p class="praIntro">
+            See how experineced developer solve problems in real-time. Watching scripted tutorials is great, but understand how developer think invaluable.
+          </p>
+        </div>
+
+        <div class="form">
+          <button class="tryIt"><span>Try it free 7days</span> then $20/mo. thereafter</button>
+          <div class="formContainer">
+
+            <form class="formcontent" id="mainForm" action="#" method="post">
+              <div class="formcontentInput">
+                  <div class="inner-addon right-addon">
+                  <i class="glyphicon glyphicon-exclamation-sign" data-rule="valueMissing"></i>
+                  <input type="text" id="input" class="form-control" maxlength="30"  name="firstname" placeholder="First Name" required="required" value=""/>
+                  </div>
+                  
+                <div class="small" data-rule="valueMissing"><small>First Name cannot empty</small></div>
+              </div>
+              <div class="formcontentInput">
+                  <div class="inner-addon right-addon">
+                  <i class="glyphicon glyphicon-exclamation-sign" data-rule="valueMissing"></i>
+                  <input type="text" id="input"  class="form-control" maxlength="30" name="lastname" placeholder="Last Name" required="required" value=""/>
+                  </div>
+                <div class="small" data-rule="valueMissing"><small>Last Name cannot empty</small></div>
+              </div>
+              <div class="formcontentInput">
+                  <div class="inner-addon right-addon">
+                  <i class="glyphicon glyphicon-exclamation-sign glyphiconss" data-rule="valueMissing"></i>
+                  <input type="email"  id="input"  class="form-control Email" placeholder="Email address" required="required" value=""/>
+                  </div>
+                  <div class="small smalltag" data-rule="valueMissing"><small>Looks Like this is not email</small></div>
+              </div>
+              <div class="formcontentInput">
+                  <div class="inner-addon right-addon">
+                  <i class="glyphicon glyphicon-exclamation-sign" data-rule="valueMissing"></i>
+                  <input type="password" id="input"  class="form-control" placeholder="Password" required="required" value=""/>
+                  </div>
+                  <div class="small" data-rule="valueMissing"><small>Password cannot empty</small></div>
+              </div>
+              <button type="submit" class="claim">CLAIM YOUR FREE TRIAL</button>
+
+              <div class="TM">
+                <small>By clicking the button, you are agreeing to our <span>Terms and Services</span></small>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </section>
+    <!-- </div> -->
+  </main>
+
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

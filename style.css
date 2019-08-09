@@ -1,0 +1,213 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body{
+    font-family: 'Poppins', sans-serif;
+    height:100vh;
+}
+
+.main{
+    font-family: 'Poppins', sans-serif;
+    background-image: url(./images/bg-intro-desktop.png);
+    background-color: hsl(0, 100%, 74%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: center;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width:100%;
+    margin: 0;
+}
+
+
+.form-page{
+    margin: 10% 5%;
+    display:flex;
+    justify-content: space-between;
+}
+
+.intro{
+    flex:1;
+    margin-top:10%;
+    margin-right: 7%;
+}
+
+.intro h1 strong{
+    color:#fff;
+    font-size: 60px;
+    font-weight: bolder;
+    line-height: 70px;
+}
+
+.praIntro {
+    color:#fff;
+    font-size: 20px;
+}
+
+.form{
+    flex:1;
+}
+
+.tryIt{
+    background-color:rgb(93, 84, 163);
+    color:#fff;
+    border: none;
+    border-radius:10px;
+    padding: 20px 70px;
+    font-size:16px;
+}
+.tryIt span{
+    font-weight: 700;
+}
+
+.formContainer{
+    background-color:#fff;
+    border-radius: 10px;
+    padding: 20px 20px;
+    margin-top:20px;
+    width: 80%;
+}
+
+.formcontentInput{
+    margin-bottom: 30px;
+}
+
+  input:focus:invalid,
+  textarea:focus:invalid,
+  select:focus:invalid {
+    color: #c33;
+    border-color: #c33;
+  }
+
+  input:focus:invalid:focus,
+textarea:focus:invalid:focus,
+select:focus:invalid:focus {
+  border-color: #c33;
+  -webkit-box-shadow: 0 0 6px #fcc;
+     -moz-box-shadow: 0 0 6px #fcc;
+          box-shadow: 0 0 6px #fcc;
+}
+
+input::placeholder{
+    font-style: italic;
+}
+
+
+input:invalid,
+textarea:invalid,
+select:invalid {
+  border-bottom: 1px solid #c33;
+}
+
+input:valid {
+    border-bottom: transparent;
+  }
+  
+
+.glyphicon-exclamation-sign, .small{
+    color: red;
+    font-style: italic;
+}
+
+.small{
+    float:right;
+}
+
+.TM{
+    margin: 5px;
+    text-align: center;
+}
+
+.TM small{
+    font-size: 10px;
+}
+
+.TM small span{
+    color:red;
+    font-size:12px;
+    font-weight: 600;
+}
+
+
+.claim{
+    background-color:hsl(154, 59%, 51%);
+    color:#fff;
+    border: none;
+    border-radius:10px;
+    padding: 15px 70px;
+    font-size:16px;
+    width: 100%;
+}
+
+.inner-addon {
+    position: relative;
+  }
+  
+.inner-addon .glyphicon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+}
+
+.right-addon .glyphicon { right: 0px;}
+  
+.right-addon input { padding-right: 30px; }
+
+
+.no-border{
+    border: 1px solid red;
+}
+
+.no-style{
+    display: none;
+}
+
+@media only screen and (max-width:450px){
+
+    .main{
+        overflow: scroll;
+    }
+
+    .form-page{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .intro{
+        margin-top:10%;
+        margin-right:0;
+        margin-bottom: 20%;
+    }
+
+    .intro h1{
+        align-items: center;
+        text-align: center;
+    }
+    .intro h1 strong{
+        color:#fff;
+        font-size: 40px;
+        line-height:1.4;
+        font-weight: bolder;
+    }
+    .praIntro {
+        color:#fff;
+        font-size: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .formContainer {
+        width: 100%;
+    }
+
+    .claim {
+        font-size: 13px;
+    }
+    .TM small {
+        font-size: 11px;
+    }
+}
