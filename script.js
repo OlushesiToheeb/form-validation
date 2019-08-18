@@ -21,32 +21,17 @@ smalltag.classList.add('no-style');
 
 button.addEventListener('click', function(){
     inputs.forEach((inputField) => {
-        if(inputField.value === "") {
-            glyphicons.forEach(glyphicon => {
-                glyphicon.classList.remove('no-style');
-            });
-            smalls.forEach(small => {
-                small.classList.remove('no-style');
-            });
-        }else{
-            glyphicons.forEach(glyphicon =>{
-                glyphicon.classList.add('no-style');
-            });
-            smalls.forEach(small =>{
-                small.classList.add('no-style');
-            });
+        const glyphicon = inputField.previousElementSibling;
+        const small = inputField.parentElement.nextElementSibling;
+
+        if (inputField.valid) {
+          glyphicon.classList.add('no-style');
+          small.classList.add('no-style');
+        } else {
+          glyphicon.classList.remove('no-style');
+          small.classList.remove('no-style');
         }
     })
-
-    if (email != email.type){
-        glyphiconss.classList.remove('no-style');
-        smalltag.classList.remove('no-style');
-        email.placeholder = "email@example/com";
-    }else{
-        glyphiconss.classList.add('no-style');
-        smalltag.classList.add('no-style');
-        email.placeholder = "Email address";
-    } 
 });
 
 
@@ -73,7 +58,7 @@ button.addEventListener('click', function(){
 // while(i < name.length){
 //     console.log(name[i]);
 //     i++;
-    
+
 // }
 
 const calcArea = radius => 3.14 * radius**2;
@@ -82,4 +67,3 @@ const calcArea = radius => 3.14 * radius**2;
 const area = calcArea(5);
 console.log(area);
 
-  
