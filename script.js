@@ -5,7 +5,7 @@ const button = document.querySelector(".claim");
 const inputs = document.querySelectorAll("#input");
 const validInputs = document.querySelectorAll("input:valid");
 const notValid = document.querySelectorAll("input:invalid");
-const formContentInput = document.querySelector(".formContentInput");
+const form = document.querySelector(".formcontent");
 const glyphicons = document.querySelectorAll(".glyphicon-exclamation-sign");
 const glyphiconss = document.querySelector('.glyphiconss');
 const smalls = document.querySelectorAll(".small");
@@ -19,7 +19,7 @@ glyphiconss.classList.add('no-style');
 smalltag.classList.add('no-style');
 
 
-button.addEventListener('click', function(){
+button.addEventListener('click', () => {
     inputs.forEach((inputField) => {
         if(inputField.value === "") {
             glyphicons.forEach(glyphicon => {
@@ -46,8 +46,38 @@ button.addEventListener('click', function(){
         glyphiconss.classList.add('no-style');
         smalltag.classList.add('no-style');
         email.placeholder = "Email address";
-    } 
+    }
+    
+    inputs.forEach((inputField) => {
+        inputField.addEventListener('keyup', e => {
+           if(e.target.value !== ''){
+            glyphicons.forEach(glyphicon =>{
+                glyphicon.classList.add('no-style');
+            });
+            smalls.forEach(small =>{
+                small.classList.add('no-style');
+            })
+        }else{
+            glyphicons.forEach(glyphicon => {
+                glyphicon.classList.remove('no-style');
+            });
+            smalls.forEach(small => {
+                small.classList.remove('no-style');
+            });
+        } 
+        });
+        
+    }); 
 });
+
+
+// inputs.addEventListener('keyup', e => {
+//     e.preventDefault();
+    
+    
+// });
+
+
 
 
 // for(i = "#"; i.length<8; i += "#"){
@@ -76,10 +106,24 @@ button.addEventListener('click', function(){
     
 // }
 
-const calcArea = radius => 3.14 * radius**2;
+// const calcArea = radius => 3.14 * radius**2;
 
 
-const area = calcArea(5);
-console.log(area);
+// const area = calcArea(5);
+// console.log(area);
 
   
+// function findSolution(target){
+//    function find(current, history){
+//        if(current == target){
+//            return history;
+//        }else if (current > target){
+//            return null;
+//        }else{
+//            return find(current + 5, `(${history} + 5)`) || find(current *3, `(${history *3})`);
+//        }
+//    }
+//    return find(1, "1");
+// }
+
+// console.log(findSolution(24));

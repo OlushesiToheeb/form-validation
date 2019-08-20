@@ -211,3 +211,57 @@ input:valid {
         font-size: 11px;
     }
 }
+
+@media only screen and (max-width: 768px){
+    .main{
+        overflow: scroll;
+    }
+
+    .form-page{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .intro{
+        margin-top:10%;
+        margin-right:0;
+        margin-bottom: 20%;
+    }
+
+    .intro h1{
+        align-items: center;
+        text-align: center;
+    }
+    .intro h1 strong{
+        color:#fff;
+        font-size: 40px;
+        line-height:1.4;
+        font-weight: bolder;
+    }
+    .praIntro {
+        color:#fff;
+        font-size: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .formContainer {
+        width: 100%;
+    }
+
+    .claim {
+        font-size: 13px;
+    }
+    .TM small {
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .formContainer {
+        width: 99%;
+    }
+    .intro h1 strong {
+        font-size: 44px;
+    }
+}
